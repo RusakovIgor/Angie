@@ -43,53 +43,53 @@ body {
 .item::after {
     left: calc(var(--index) * -1);
 }
-.items .item:focus {
+.items .item:hover {
     transform: translateZ(calc(var(--index) * 10));
     filter: inherit;
 }
 
 /* Right */
 
-.items .item:focus + * {
+.items .item:hover + * {
     transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
     filter: inherit;
     z-index: -1;
 }
-.items .item:focus + * + * {
+.items .item:hover + * + * {
     transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
     filter: inherit;
     z-index: -2;
 }
-.items .item:focus + * + * + * {
+.items .item:hover + * + * + * {
     transform: translateZ(calc(var(--index) * 2.4))rotateY(30deg);
     filter: inherit;
     z-index: -3;
 }
-.items .item:focus + * + * + * + * {
+.items .item:hover + * + * + * + * {
     transform: translateZ(calc(var(--index) * .6)) rotateY(14deg);
     z-index: -4;
 }
 
 /* Left */
 
-.item:has(+ :focus) {
+.item:has(+ :hover) {
     transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
     filter: inherit;
 }
-.item:has(+ * + :focus) {
+.item:has(+ * + :hover) {
     transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
     filter: inherit;
 }
-.item:has(+ * + * + :focus) {
+.item:has(+ * + * + :hover) {
     transform: translateZ(calc(var(--index) * 2.4)) rotateY(-30deg);
     filter: inherit;
 }
-.item:has(+ * + * + * + :focus) {
+.item:has(+ * + * + * + :hover) {
     transform: translateZ(calc(var(--index) * .6)) rotateY(-14deg);
     filter: inherit;
 }
 
-.items .item:active, .items .item:focus {
+.items .item:active, .items .item:hover {
     width: 28vw;
     transform: translateZ(calc(var(--index) * 10));
     filter: inherit;
